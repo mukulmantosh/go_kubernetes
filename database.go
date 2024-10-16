@@ -41,7 +41,7 @@ func (c Client) RunMigration() error {
 	return nil
 }
 
-func NewDBClient() (DBClient, error) {
+func NewDBClient() (Client, error) {
 	dbHost := os.Getenv("DB_HOST")
 	dbUsername := os.Getenv("DB_USERNAME")
 	dbPassword := os.Getenv("DB_PASSWORD")
@@ -57,7 +57,7 @@ func NewDBClient() (DBClient, error) {
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		return nil, err
+		return Client{}, err
 	}
 
 	client := Client{db}
