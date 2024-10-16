@@ -20,3 +20,7 @@ Before starting up this project, make sure you have the necessary dependencies i
 ```bash
 docker run --name goland-k8s-demo -p 5432:5432 -e POSTGRES_PASSWORD=mukul123 -d postgres
 ```
+
+<hr/>
+
+Copyright © 2024 [JetBrains](https://www.jetbrains.com/) s.r.o. JetBrains and the JetBrains logo are trademarks of JetBrains s.r.o.
