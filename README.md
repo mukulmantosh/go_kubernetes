@@ -21,6 +21,10 @@ Before starting up this project, make sure you have the necessary dependencies i
 docker run --name goland-k8s-demo -p 5432:5432 -e POSTGRES_PASSWORD=mukul123 -d postgres
 ```
 
+### DockerHub
+
+If you'd like to try out the application without any installation, you can download the Docker image from [DockerHub](https://hub.docker.com/r/mukulmantosh/go_k8s/tags).
+
 <hr/>
 
 Copyright © 2024 [JetBrains](https://www.jetbrains.com/) s.r.o. JetBrains and the JetBrains logo are trademarks of JetBrains s.r.o.
