@@ -1,4 +1,5 @@
 # Kubernetes with GoLand
+![goland_k8s](./misc/images/background.png)
 
 ### Prerequisites
 
@@ -18,17 +19,4 @@ Before starting up this project, make sure you have the necessary dependencies i
 
 ```bash
 docker run --name goland-k8s-demo -p 5432:5432 -e POSTGRES_PASSWORD=mukul123 -d postgres
-```
-
-
-### Environment Variables
-
-Be sure to place the `.env` file in the project root and update the information according to your settings. Refer to the example below.
-
-```
-DB_HOST=localhost
-DB_USERNAME=**************
-DB_PASSWORD=**************
-DB_NAME=go_k8s
-DB_PORT=5432
 ```
