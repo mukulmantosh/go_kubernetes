@@ -23,7 +23,7 @@ docker run --name goland-k8s-demo -p 5432:5432 -e POSTGRES_PASSWORD=mukul123 -d 
 
 ### DockerHub
 
-If you'd like to try out the application without any installation, you can download the Docker image from [DockerHub](https://hub.docker.com/r/mukulmantosh/go_k8s/tags).
+If you'd like to try out the application without any installation, you can download the Docker [image](https://hub.docker.com/r/mukulmantosh/go_k8s/tags).
 
 <hr/>
 
