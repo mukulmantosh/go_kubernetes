@@ -2,6 +2,13 @@
   <configuration default="false" name="Go Kubernetes App" type="GoApplicationRunConfiguration" factoryName="Go Application">
     <module name="go_kubernetes" />
     <working_directory value="$PROJECT_DIR$" />
+    <envs>
+      <env name="DB_HOST" value="localhost" />
+      <env name="DB_USERNAME" value="postgres" />
+      <env name="DB_PASSWORD" value="mukul123" />
+      <env name="DB_NAME" value="go_k8s" />
+      <env name="DB_PORT" value="5432" />
+    </envs>
     <kind value="PACKAGE" />
     <package value="go_kubernetes" />
     <directory value="$PROJECT_DIR$" />
