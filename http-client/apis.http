@@ -1,5 +1,5 @@
-// Create a new user
-POST http://localhost:30004/user
+### Create a new user
+POST http://localhost:8080/user
 Content-Type: application/json
 
 {
@@ -7,3 +7,27 @@ Content-Type: application/json
   "age": 44,
   "email": "johnwick@gmail.com"
 }
+
+
+
+### GET Users List
+GET http://localhost:8080/users
+Accept: application/json
+
+
+
+### Update User by ID
+@userid = 2
+PUT http://localhost:8080/user/{{userid}}
+Content-Type: application/json
+
+{
+  "name": "John Wick 2",
+  "age": 54,
+  "email": "johnwick22@gmail.com"
+}
+
+### Delete User by ID
+
+DELETE http://localhost:8080/user/{{userid}}
+Content-Type: application/json
