@@ -14,13 +14,6 @@ Before starting up this project, make sure you have the necessary dependencies i
 - [x] [PostgreSQL](https://www.postgresql.org/) - The World's Most Advanced Open Source Relational Database
 
 
-
-#### Running Postgres Database
-
-```bash
-docker run --name goland-k8s-demo -p 5432:5432 -e POSTGRES_PASSWORD=mukul123 -d postgres
-```
-
 ### DockerHub
 
 If you'd like to try out the application without any installation, you can download the Docker [image](https://hub.docker.com/r/mukulmantosh/go_k8s/tags).
