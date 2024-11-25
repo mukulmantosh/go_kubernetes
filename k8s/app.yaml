@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-cm
+  namespace: go-k8s-demo
+data:
+  DB_HOST: "postgres-service"
+  DB_USERNAME: "sampleuser"
+  DB_PASSWORD: "sampler123"
+  DB_NAME: "sampledb"
+  DB_PORT: "5432"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-k8s-demo-deploy
+  namespace: go-k8s-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-k8s-demo-app
+  template:
+    metadata:
+      labels:
+        app: go-k8s-demo-app
+    spec:
+      containers:
+        - image: mukulmantosh/go_k8s:1.0
+          imagePullPolicy: Always
+          name: go-k8s-demo
+          envFrom:
+            - configMapRef:
+                name: app-cm
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+  namespace: go-k8s-demo
+  labels:
+    app: app-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30004
+  selector:
+    app: go-k8s-demo-app
