@@ -24,6 +24,7 @@ If you'd like to try out the application without any installation, you can downl
 
 All files have been merged into one. 
 
+- `k8s/ns.yaml` contains Namespace. This should run first before moving to `db` and then `app`.
 - `k8s/app.yaml` contains ConfigMap, Deployment and Service.
 - `k8s/db/yaml` contains ConfigMap, Deployment, Service, PersistentVolume and PersistentVolumeClaim. 
 
