@@ -24,7 +24,8 @@ If you'd like to try out the application without any installation, you can downl
 
 All files have been merged into one. 
 
+- `k8s/ns.yaml` contains Namespace. This should run first before moving to `db` and then `app`.
 - `k8s/app.yaml` contains ConfigMap, Deployment and Service.
 - `k8s/db/yaml` contains ConfigMap, Deployment, Service, PersistentVolume and PersistentVolumeClaim. 
 
-Copyright © 2024 [JetBrains](https://www.jetbrains.com/) s.r.o. JetBrains and the JetBrains logo are trademarks of JetBrains s.r.o.
+Copyright © 2026 [JetBrains](https://www.jetbrains.com/) s.r.o. JetBrains and the JetBrains logo are trademarks of JetBrains s.r.o.
