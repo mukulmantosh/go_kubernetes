@@ -1,5 +1,9 @@
+@URL=http://localhost:8080
+// @URL=http://localhost:30004 <- Uncomment once app is live on K8s.
+
+
 ### Create a new user
-POST http://localhost:8080/user
+POST {{URL}}/user
 Content-Type: application/json
 
 {
@@ -11,14 +15,15 @@ Content-Type: application/json
 
 
 ### GET Users List
-GET http://localhost:8080/users
+GET {{URL}}/users
 Accept: application/json
 
 
 
 ### Update User by ID
+// change user id
 @userid = 2
-PUT http://localhost:8080/user/{{userid}}
+PUT {{URL}}/user/{{userid}}
 Content-Type: application/json
 
 {
@@ -29,5 +34,5 @@ Content-Type: application/json
 
 ### Delete User by ID
 
-DELETE http://localhost:8080/user/{{userid}}
+DELETE {{URL}}/user/{{userid}}
 Content-Type: application/json

@@ -73,7 +73,7 @@ spec:
     spec:
       containers:
         - name: postgres-db
-          image: postgres:17.0
+          image: postgres:17
           ports:
             - containerPort: 5432
           envFrom:
